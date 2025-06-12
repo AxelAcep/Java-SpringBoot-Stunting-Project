@@ -1,15 +1,17 @@
 {
-  "name": "Spring Boot Dev Container",
+  "name": "Spring Boot Dev",
   "build": {
     "dockerfile": "../.gitpod.Dockerfile"
   },
-  "workspaceFolder": "/workspace",
-  "postCreateCommand": "./mvnw clean install",
+  "workspaceFolder": "/workspaces/Java-SpringBoot-Stunting-Project",
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack"
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "redhat.java"
       ]
     }
-  }
+  },
+  "postCreateCommand": "./mvnw clean install || ./gradlew build"
 }
