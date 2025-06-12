@@ -1,8 +1,4 @@
-# .gitpod.Dockerfile
-FROM gitpod/workspace-full
+FROM mcr.microsoft.com/devcontainers/java:17
 
-# Install JDK 17
-RUN sudo apt-get update && \
-    sudo apt-get install -y openjdk-17-jdk
-
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# Tambahan command jika perlu, seperti curl, git, dll
+RUN apt-get update && apt-get install -y curl
